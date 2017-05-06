@@ -29,7 +29,16 @@ I am an interdisciplinary scientist interested in collective behaviour and compl
 
 <!--[](images/RMarkdownOutputFormats.png)-->
 <!-- comment -->
+```{r}
+library(scholar)
+pubs<-get_publications('KLeQTtEAAAAJ')
+as.character(pubs$author)%>%strsplit(', ') -> aulinks
 
+#aull <- data.frame(from = pubs$Title[as.numeric(melt(aulinks)$L1)], to = melt(aulinks)$value) # make link list for authors
+aull <- data.frame(from = 'L Danon', to = melt(aulinks)$value) # make link list for authors
+paperll <- data.frame(from = 'L Danon', to = pubs$title)
+
+```
 
 
 
