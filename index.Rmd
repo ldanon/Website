@@ -1,0 +1,37 @@
+---
+title: "Leon Danon"
+output: html_document
+---
+
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+# Leon Danon
+
+### Senior Lecturer in Data Analytics {style="padding-top: 0px;"}
+
+I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, with emphasis on infectious diseases and other health related questions, often motivated and informed by analysis of large datasets. 
+
+
+</div>
+<div class="col-sm-6">
+
+<!--[](images/RMarkdownOutputFormats.png)-->
+<!-- comment -->
+
+
+
+
+
+
