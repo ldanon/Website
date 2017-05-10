@@ -17,30 +17,207 @@ output: html_document
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-# Leon Danon
-
 ### Senior Lecturer in Data Analytics {style="padding-top: 0px;"}
 
-I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, with emphasis on infectious diseases and other health related questions, often motivated and informed by analysis of large datasets. 
+I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, contacts and social networks. My research is often motivated by the study of large, relevant datasets. In particular, I am interested in infectious disease epidemiology and the interplay between human behaviour and disease transmission at all spatial and temporal scales. 
+
+Below is a network of (most of)  my papers and scientific collaborators involved. Circles indicate authors, and boxes indicate papers. The size of the box is indicative of the number of citations, and the size of the circle is indicative of author name length. 
+
+<!--/div-->
+<!--<div class="col-sm-6"-->
 
 
-</div>
-<div class="col-sm-6">
-
+blah blahd
 <!--[](images/RMarkdownOutputFormats.png)-->
 <!-- comment -->
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+```
 ```{r}
 library(scholar)
-pubs<-get_publications('KLeQTtEAAAAJ')
-as.character(pubs$author)%>%strsplit(', ') -> aulinks
+library(stringi)
+library(dplyr)
+library(reshape2)
+library(visNetwork)
+```
+```{r,eval=FALSE}
 
-#aull <- data.frame(from = pubs$Title[as.numeric(melt(aulinks)$L1)], to = melt(aulinks)$value) # make link list for authors
-aull <- data.frame(from = 'L Danon', to = melt(aulinks)$value) # make link list for authors
-paperll <- data.frame(from = 'L Danon', to = pubs$title)
+sid='KLeQTtEAAAAJ'
+
+pubs<-get_publications(sid)
+#save(pubs,file='pubs.Rdata')
+load('pubs.Rdata')
+pubs$author<-stri_trans_general(pubs$author,"Latin-ASCII")
+
+write.csv(pubs,'pubs.csv')
+pubs=read.csv('pubs.csv')
+pubs=pubs[1:10,] # for example - some more cleaning is probably needed!!
+as.character(pubs$author)%>%strsplit(', ')-> aulinks
+
+
+meltedlinks<-melt(aulinks) # create a melted versio of coauthor links
+meltedlinks$value<-stri_trans_general(meltedlinks$value,"Latin-ASCII") # get rid of annoying accents
+
+aull <- data.frame(from = pubs$title[as.numeric(meltedlinks$L1)], to = meltedlinks$value) # make link list for authors
+
+#sort(levels(aull$to)) #check whether coauthors accents are still there or have been removed. 
+
+pubs%>% select(id = title, cites) %>% transmute(id=id,value=log10(cites)+1)->papernodes
+
+
+papernodes$group = 'Paper'
+
+aull %>% distinct(to) %>% transmute(id=to,value = 1) -> authornodes
+authornodes$id<-stri_trans_general(authornodes$id,"Latin-ASCII")
+authornodes$group = 'Author'
+
+nodes<-data.frame(rbind(papernodes,authornodes))
+nodes
+
+visNetwork(papernodes, aull, width = "100%",height = "600px") %>%
+#  visNodes(scaling = list(min = 20, max = 50)) %>%
+#  visGroups(groupname = "Author", shape = "circle") %>%
+#  visGroups(groupname = "Paper", shape = "square") %>%
+  visOptions(highlightNearest = TRUE)%>% 
+  visInteraction(hover = TRUE)%>%
+  visPhysics(solver = "barnesHut",stabilization = TRUE,
+           barnesHut = list(avoidOverlap = 0.05))
+
+
+# unfortunately this data messes up the coauthors list, substituting large coauthor list with "..." annoying!
+# there is no fix without scraping each paper page,
+```
+
+```{r, eval = FALSE}
+#Let's try ORCID to make a wordcloud
+library(devtools)
+#install_github('ropensci/rorcid')
+library(rorcid)
+library(wordcloud2)
+library(stringr)
+require(tm)
+
+source('orcidcloud.R')
+oid <- "0000-0002-7076-1871"
+data <- orcid_id(orcid = oid, profile="works")
+ids<-identifiers(data)
+
+
+dois<-ids$`0000-0002-7076-1871`
+out <- works(orcid_id(oid))
+years <- get.years(data[[1]])
+titles <- get.titles(data[[1]])
+authors <- get.authors(data[[1]],surnames=TRUE)
+data[[1]][[]]
+
+
+co.authors <- lapply(authors,setdiff,"Danon")
+make.cloud(titles,group=6)
+melt(titles)
+# now make a network of authors and papers. 
+# hard and no citations what about dois?
+
+
 
 ```
 
 
+```{r,eval=FALSE}
+options(stringsAsFactors = FALSE)
+indx=c(1,2,3,4,5,6,7)
+paste(titles[indx])
+text <- paste(titles,collapse=" ")
 
 
+
+
+
+
+
+cleanCorpus <- function(corpus){
+corpus.tmp <- tm_map(corpus, removePunctuation)
+corpus.tmp <- tm_map(corpus.tmp,stripWhitespace)
+corpus.tmp <- tm_map(corpus.tmp,tolower)
+corpus.tmp <- tm_map(corpus.tmp, PlainTextDocument)
+corpus.tmp <- tm_map(corpus.tmp,removeWords, stopwords("english"))
+return(corpus.tmp)
+}
+# Build TDM
+generateTDM <- function(d){
+s.dir <-path
+s.cor <-Corpus(DirSource(directory = s.dir, encoding= "UTF-8"))
+s.cor.cl <- cleanCorpus(s.cor)
+s.tdm <- TermDocumentMatrix(s.cor.cl)
+s.tdm
+}
+
+TDM <- generateTDM(text)
+# Do I need a matrix or a DF? We will see...
+TDMasMatrix <- as.matrix(text)
+TDMasDF<-data.frame(TDMasMatrix)
+TDMasDF$words <-rownames(TDMasDF)
+# Column headers
+colnames(TDMasDF) <- c("freq", "word")
+# sorting (not really needed)
+TDMasDF<-TDMasDF[order(-TDMasDF$freq),]
+# Column order is important for wordcloud2
+TDMasDF<-TDMasDF[, c("word", "freq")]
+ 
+# The results!
+# wordcloud2(TDMasDF, size = 0.4,  figPath="./liberty.png", backgroundColor = 'black', fontFamily="Loma")
+# The one above uses a custom shape but it does not keep the x/y proportions
+wordcloud2(TDMasDF, size = 0.3,  shape="star", backgroundColor = 'black', fontFamily="Loma")
+letterCloud(TDMasDF, word="USA", size = 0.3, fontFamily="Loma",  backgroundColor = 'black')
+
+
+wordcloud2(wordFreq)
+
+
+```
+
+
+```{r}
+#let's try downloading and reading scopus export csv
+
+data<-read.csv("scopus_edits.csv")
+
+
+as.character(data$Author)%>%strsplit(', ')->aulinks
+
+meltedlinks<-melt(aulinks) # create a melted versio of coauthor links
+meltedlinks%>%filter(!grepl('\\.',value))->meltedlinks # remove initials. 
+meltedlinks$value<-stri_trans_general(meltedlinks$value,"Latin-ASCII") # get rid of annoying accents
+
+aull <- data.frame(from = data$Title[as.numeric(meltedlinks$L1)], to = meltedlinks$value) # make link list for authors and papers. 
+
+#data%>%select(id=Title,DOI,value = Cited.by,Source.title,Year)-> papernodes
+data$group="Paper"
+data$tooltip <- paste0(data$Title,"<br>",
+    data$Source.title,"<br>",
+  "(",data$Year,")<br>",
+  "<a href=http://dx.doi.org/",data$DOI,">",data$DOI,"</a>"
+)
+
+data%>%select(id=Title,group,value = Cited.by,title=tooltip)->papernodes
+
+aull%>%select(id=to)%>%distinct(id)->aunodes
+aunodes$group="Author"
+aunodes$title <- paste0(aunodes$id)
+aunodes$value = 1
+
+nodes<-data.frame(rbind(papernodes,aunodes))
+
+visNetwork(nodes, aull, width = "100%",height = "600px") %>%
+  visNodes(scaling = list(min = 20, max = 100)) %>%
+  visGroups(groupname = "Author", shape = "circle",color = list(background = 'pink',border = 'red')) %>%
+  visGroups(groupname = "Paper", shape = "square",color = list(background = 'grey', border = 'black')) %>%
+  visOptions(highlightNearest = TRUE)%>% 
+  visInteraction(hover = TRUE)%>%
+    visLegend(width = 0.1)%>%
+  visPhysics(solver = "barnesHut",stabilization = TRUE,
+           barnesHut = list(avoidOverlap = 0.05))
+
+```
 
