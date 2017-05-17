@@ -215,10 +215,10 @@ visNetwork(nodes, aull, width = "100%",height = "600px") %>%
   visGroups(groupname = "Author", shape = "circle",color = list(background = 'pink',border = 'red')) %>%
   visGroups(groupname = "Paper", shape = "square",color = list(background = 'grey', border = 'black')) %>%
   visOptions(highlightNearest = TRUE)%>% 
-  visInteraction(hover = TRUE)#%>%
-  #visLegend(width = 0.1)%>%
-  #visPhysics(solver = "barnesHut",stabilization = TRUE,
-  #         barnesHut = list(avoidOverlap = 0.05))
+  visInteraction(hover = FALSE,tooltipDelay = 0)%>%
+  visIgraphLayout(randomSeed=20,type="full",smooth=TRUE)#%>%
+  #visLegend(width = 0.1)#%>%
+  #visPhysics(solver = "barnesHut",stabilization = TRUE,barnesHut = list(avoidOverlap = 0.05))
 
 ```
 
