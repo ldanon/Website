@@ -1,11 +1,10 @@
 ---
 title: "Leon Danon"
 output:
-#  html_document: default
+  html_document: default
 #  slidy_presentation: default
-  ioslides_presentation: default
+#  ioslides_presentation: default
 ---
-<!--
 <style type="text/css">
 .title {
   display: none;
@@ -27,14 +26,14 @@ I am an interdisciplinary scientist interested in collective behaviour and compl
 Below is a network of (most of)  my papers and scientific collaborators involved. Circles indicate authors, and boxes indicate papers. The size of the box is indicative of the number of citations, and the size of the circle is indicative of author name length. 
 
 </div>
-<div class="col-sm-6">
+
 
 
 
 <!--[](images/RMarkdownOutputFormats.png)-->
 <!-- comment -->
 
-![](./Picture1.png)
+
 ```{r,echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_chunk$set(warning = FALSE)
@@ -42,7 +41,7 @@ knitr::opts_chunk$set(message = FALSE)
 ```
 
 
-![](./Picture2.png)
+
 ```{r}
 library(scholar)
 library(stringi)
@@ -96,7 +95,7 @@ aunodes$value = 1
 aunodes$color = 'pink'
 nodes<-data.frame(rbind(papernodes,aunodes))
 
-net<-visNetwork(nodes, aull, width = "100%",height = "800px") %>%
+visNetwork(nodes, aull, width = "100%",height = "800px") %>%
   visNodes(scaling = list(min = 20, max = 100)) %>%
   #visGroups(groupname = "Author", shape = "circle") %>%
   #visGroups(groupname = "Paper", shape = "square",color = list(background = 'grey', border = 'black')) %>%
@@ -108,6 +107,6 @@ net<-visNetwork(nodes, aull, width = "100%",height = "800px") %>%
   #visPhysics(solver = "barnesHut",stabilization = TRUE,barnesHut = list(avoidOverlap = 0.05))
 
 
-visSave(net,"collab.html")
+
 ```
 
