@@ -1,204 +1,94 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
+  <title>Leon Danon</title>
 
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
-
-
-
-
-<title>Leon Danon</title>
-
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<script src="site_libs/htmlwidgets-0.8/htmlwidgets.js"></script>
-<link href="site_libs/vis-4.17.0/vis.css" rel="stylesheet" />
-<script src="site_libs/vis-4.17.0/vis.min.js"></script>
-<script src="site_libs/visNetwork-binding-1.0.3/visNetwork.js"></script>
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
-}
-</script>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Leon Danon',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                      },
+
+      // Author information
+      presenters: [
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+
+  <link href="site_libs/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="site_libs/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="site_libs/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="site_libs/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/slide-deck.js"></script>
 
 </head>
 
-<body>
+<body style="opacity: 0">
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
+<slides>
 
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+          </hgroup>
+  </slide>
 
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-
-<div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
-
-<!-- code folding -->
-
-
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Leon Danon</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">Leon Danon</h1>
-
-</div>
-
-
+<!--
 <style type="text/css">
 .title {
   display: none;
@@ -209,42 +99,33 @@ $(document).ready(function () {
 }
 
 </style>
+
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
-<h3 id="senior-lecturer-in-data-analytics" style="padding-top: 0px;">Senior Lecturer in Data Analytics</h3>
-<p>I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, contacts and social networks. My research is often motivated by the study of large, relevant datasets In particular, I am interested in infectious disease epidemiology and the interplay between human behaviour and disease transmission at all spatial and temporal scales.</p>
-<p>Below is a network of (most of) my papers and scientific collaborators involved. Circles indicate authors, and boxes indicate papers. The size of the box is indicative of the number of citations, and the size of the circle is indicative of author name length.</p>
+
+### Senior Lecturer in Data Analytics {style="padding-top: 0px;"}
+
+I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, contacts and social networks. My research is often motivated by the study of large, relevant datasets In particular, I am interested in infectious disease epidemiology and the interplay between human behaviour and disease transmission at all spatial and temporal scales. 
+
+Below is a network of (most of)  my papers and scientific collaborators involved. Circles indicate authors, and boxes indicate papers. The size of the box is indicative of the number of citations, and the size of the circle is indicative of author name length. 
+
 </div>
 <div class="col-sm-6">
 
 
 
 <!--[](images/RMarkdownOutputFormats.png)-->
+
 <!-- comment -->
-<div class="figure">
-<img src="Picture1.png" />
 
-</div>
-<div id="htmlwidget-9ad52a43c01fc4e95187" style="width:100%;height:600px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9ad52a43c01fc4e95187">{"x":{"nodes":{"id":["Defining the population attributable fraction for infectious diseases","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","The need for data science in epidemic modelling: Comment on: <d0>Mathematical models to characterize early epidemic growth: A review<d3> by Gerardo Chowell et al.","Testing the hypothesis of preferential attachment in social network formation","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","Social encounter networks: Characterizing great Britain","Social encounter networks: Collective properties and disease transmission","Tools to study trends in community structure: Application to fish and livestock trading networks","Networks and the epidemiology of infectious disease","Surveillance of influenza in Iceland during the 2009 pandemic","Student behavior during a school closure caused by pandemic influenza A/H1N1","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Individual identity and movement networks for disease metapopulations","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure","Optimal information transmission in organizations: Search and congestion","The role of routine versus random movements on the spread of disease in Great Britain","A Motif-Based Approach to Network Epidemics","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Mathematical modelling of infectious diseases","Impact of community structure on information transfer","Host community structure and the maintenance of pathogen diversity","The real communication network behind the formal chart: Community structure in organizations","The effect of size heterogeneity on community identification in complex networks","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain","Comparing community structure identification","Local search with congestion in complex communication networks","Community analysis in social networks","Community structure in Jazz","Self-similar community structure in a network of human interactions","Unified scaling law for earthquakes","Unified scaling law for earthquakes II","Brooks-Pollock","Danon","Rodrigues","Morales-Aza","Sikora","Thors","Ferreira","Gould","Hinds","Finn","House","Read","Keeling","Hancock","Rehman","Hall","Edeghere","Valadez","Berendes","Jeffery","Thomson","Ben Othman","Turki","Saffialden","Mirzoyan","Othman","Vernon","Green","Werkman","Munro","Kao","Kiss","Ford","Jewell","Roberts","Ross","Sigmundsdottir","Gudnason","Olafsson","Baldvinsdottir","Atladottir","Love","Briem","Miller","O'Hagan","Goldstein","Lajous","Lipsitch","Lopez-Ridaura","Astley","Dowell","Cowling","Fang","Hagy","Reshef","Robins","Biedrzycki","Arenas","Cabrales","Diaz-Guilera","Guimera","Vega-Redondo","Davies","Cohen","Wallinga","Riley","Reed","McCarron","Buckee","Gupta","Giralt","Duch","Gleiser","Bak","Christensen","Scanlon"],"group":["Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Paper","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author","Author"],"value":[1,1,1,1,1,7,15,1,25,14,78,12,25,5,24,60,8,7,15,21,26,31,35,11,27,72,97,727,7,124,538,520,363,77,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"title":["Defining the population attributable fraction for infectious diseases<br>International Journal of Epidemiology<br>(2017)<br><a href=http://dx.doi.org/10.1093/ije/dyx055> DOI:10.1093/ije/dyx055\u003c/a><br>Epidemiology","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities<br>PLoS ONE<br>(2016)<br><a href=http://dx.doi.org/doi.org/10.1371/journal.pone.0163435> DOI:doi.org/10.1371/journal.pone.0163435\u003c/a><br>Epidemiology","The need for data science in epidemic modelling: Comment on: <d0>Mathematical models to characterize early epidemic growth: A review<d3> by Gerardo Chowell et al.<br>Physics of Life Reviews<br>(2016)<br><a href=http://dx.doi.org/10.1016/j.plrev.2016.08.011> DOI:10.1016/j.plrev.2016.08.011\u003c/a><br>Epidemiology","Testing the hypothesis of preferential attachment in social network formation<br>EPJ Data Science<br>(2015)<br><a href=http://dx.doi.org/10.1140/epjds/s13688-015-0052-2> DOI:10.1140/epjds/s13688-015-0052-2\u003c/a><br>Contact patterns","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set<br>PLoS Computational Biology<br>(2014)<br><a href=http://dx.doi.org/10.1371/journal.pcbi.1003809> DOI:10.1371/journal.pcbi.1003809\u003c/a><br>Epidemiology","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya<br>PLoS ONE<br>(2013)<br><a href=http://dx.doi.org/10.1371/journal.pone.0066701> DOI:10.1371/journal.pone.0066701\u003c/a><br>Disease surveillance","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs<br>Journal of Acquired Immune Deficiency Syndromes<br>(2013)<br><a href=http://dx.doi.org/10.1097/QAI.0b013e318284714a> DOI:10.1097/QAI.0b013e318284714a\u003c/a><br>Disease surveillance","Social encounter networks: Characterizing great Britain<br>Proceedings of the Royal Society B: Biological Sciences<br>(2013)<br><a href=http://dx.doi.org/10.1098/rspb.2013.1037> DOI:10.1098/rspb.2013.1037\u003c/a><br>Contact patterns","Social encounter networks: Collective properties and disease transmission<br>Journal of the Royal Society Interface<br>(2012)<br><a href=http://dx.doi.org/10.1098/rsif.2012.0357> DOI:10.1098/rsif.2012.0357\u003c/a><br>Contact patterns","Tools to study trends in community structure: Application to fish and livestock trading networks<br>Preventive Veterinary Medicine<br>(2011)<br><a href=http://dx.doi.org/10.1016/j.prevetmed.2011.01.008> DOI:10.1016/j.prevetmed.2011.01.008\u003c/a><br>Community structure","Networks and the epidemiology of infectious disease<br>Interdisciplinary Perspectives on Infectious Diseases<br>(2011)<br><a href=http://dx.doi.org/10.1155/2011/284909> DOI:10.1155/2011/284909\u003c/a><br>Network Epidemiology","Surveillance of influenza in Iceland during the 2009 pandemic<br>Eurosurveillance<br>(2010)<br><a href=http://dx.doi.org/http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=19742> DOI:http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=19742\u003c/a><br>Disease surveillance","Student behavior during a school closure caused by pandemic influenza A/H1N1<br>PLoS ONE<br>(2010)<br><a href=http://dx.doi.org/10.1371/journal.pone.0010425> DOI:10.1371/journal.pone.0010425\u003c/a><br>Epidemiology","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico<br>Emerging Infectious Diseases<br>(2010)<br><a href=http://dx.doi.org/10.3201/eid1609.100671> DOI:10.3201/eid1609.100671\u003c/a><br>Disease surveillance","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009<br>BMC Infectious Diseases<br>(2010)<br><a href=http://dx.doi.org/10.1186/1471-2334-10-211> DOI:10.1186/1471-2334-10-211\u003c/a><br>Epidemiology","Individual identity and movement networks for disease metapopulations<br>Proceedings of the National Academy of Sciences of the United States of America<br>(2010)<br><a href=http://dx.doi.org/10.1073/pnas.1000416107> DOI:10.1073/pnas.1000416107\u003c/a><br>Epidemiology","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure<br>BMC Infectious Diseases<br>(2010)<br><a href=http://dx.doi.org/10.1186/1471-2334-10-25> DOI:10.1186/1471-2334-10-25\u003c/a><br>Epidemiology","Optimal information transmission in organizations: Search and congestion<br>Review of Economic Design<br>(2010)<br><a href=http://dx.doi.org/10.1007/s10058-008-0067-2> DOI:10.1007/s10058-008-0067-2\u003c/a><br>Community structure","The role of routine versus random movements on the spread of disease in Great Britain<br>Epidemics<br>(2009)<br><a href=http://dx.doi.org/10.1016/j.epidem.2009.11.002> DOI:10.1016/j.epidem.2009.11.002\u003c/a><br>Epidemiology","A Motif-Based Approach to Network Epidemics<br>Bulletin of Mathematical Biology<br>(2009)<br><a href=http://dx.doi.org/10.1007/s11538-009-9420-z> DOI:10.1007/s11538-009-9420-z\u003c/a><br>Network Epidemiology","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico<br>PLoS ONE<br>(2009)<br><a href=http://dx.doi.org/10.1371/journal.pone.0006895> DOI:10.1371/journal.pone.0006895\u003c/a><br>Disease surveillance","Mathematical modelling of infectious diseases<br>British Medical Bulletin<br>(2009)<br><a href=http://dx.doi.org/10.1093/bmb/ldp038> DOI:10.1093/bmb/ldp038\u003c/a><br>Epidemiology","Impact of community structure on information transfer<br>Physical Review E - Statistical, Nonlinear, and Soft Matter Physics<br>(2008)<br><a href=http://dx.doi.org/10.1103/PhysRevE.77.036103> DOI:10.1103/PhysRevE.77.036103\u003c/a><br>Community structure","Host community structure and the maintenance of pathogen diversity<br>Proceedings of the Royal Society B: Biological Sciences<br>(2007)<br><a href=http://dx.doi.org/10.1098/rspb.2007.0415> DOI:10.1098/rspb.2007.0415\u003c/a><br>Network Epidemiology","The real communication network behind the formal chart: Community structure in organizations<br>Journal of Economic Behavior and Organization<br>(2006)<br><a href=http://dx.doi.org/10.1016/j.jebo.2004.07.021> DOI:10.1016/j.jebo.2004.07.021\u003c/a><br>Community structure","The effect of size heterogeneity on community identification in complex networks<br>Journal of Statistical Mechanics: Theory and Experiment<br>(2006)<br><a href=http://dx.doi.org/10.1088/1742-5468/2006/11/P11010> DOI:10.1088/1742-5468/2006/11/P11010\u003c/a><br>Community structure","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain<br>Proceedings of the Royal Society B: Biological Sciences<br>(2006)<br><a href=http://dx.doi.org/10.1098/rspb.2006.3505> DOI:10.1098/rspb.2006.3505\u003c/a><br>Network Epidemiology","Comparing community structure identification<br>Journal of Statistical Mechanics: Theory and Experiment<br>(2005)<br><a href=http://dx.doi.org/10.1088/1742-5468/2005/09/P09008> DOI:10.1088/1742-5468/2005/09/P09008\u003c/a><br>Community structure","Local search with congestion in complex communication networks<br>Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)<br>(2004)<br><a href=http://dx.doi.org/10.1007/978-3-540-24688-6_139> DOI:10.1007/978-3-540-24688-6_139\u003c/a><br>Community structure","Community analysis in social networks<br>European Physical Journal B<br>(2004)<br><a href=http://dx.doi.org/10.1140/epjb/e2004-00130-1> DOI:10.1140/epjb/e2004-00130-1\u003c/a><br>Community structure","Community structure in Jazz<br>Advances in Complex Systems<br>(2003)<br><a href=http://dx.doi.org/10.1142/S0219525903001067> DOI:10.1142/S0219525903001067\u003c/a><br>Community structure","Self-similar community structure in a network of human interactions<br>Physical Review E - Statistical, Nonlinear, and Soft Matter Physics<br>(2003)<br><a href=http://dx.doi.org/10.1103/PhysRevE.68.065103> DOI:10.1103/PhysRevE.68.065103\u003c/a><br>Community structure","Unified scaling law for earthquakes<br>Physical Review Letters<br>(2002)<br><a href=http://dx.doi.org/10.1103/PhysRevLett.88.178501> DOI:10.1103/PhysRevLett.88.178501\u003c/a><br>Earthquakes","Unified scaling law for earthquakes II<br>Proceedings of the National Academy of Sciences of the United States of America<br>(2002)<br><a href=http://dx.doi.org/10.1073/pnas.012581099> DOI:10.1073/pnas.012581099\u003c/a><br>Earthquakes","Brooks-Pollock","Danon","Rodrigues","Morales-Aza","Sikora","Thors","Ferreira","Gould","Hinds","Finn","House","Read","Keeling","Hancock","Rehman","Hall","Edeghere","Valadez","Berendes","Jeffery","Thomson","Ben Othman","Turki","Saffialden","Mirzoyan","Othman","Vernon","Green","Werkman","Munro","Kao","Kiss","Ford","Jewell","Roberts","Ross","Sigmundsdottir","Gudnason","Olafsson","Baldvinsdottir","Atladottir","Love","Briem","Miller","O'Hagan","Goldstein","Lajous","Lipsitch","Lopez-Ridaura","Astley","Dowell","Cowling","Fang","Hagy","Reshef","Robins","Biedrzycki","Arenas","Cabrales","Diaz-Guilera","Guimera","Vega-Redondo","Davies","Cohen","Wallinga","Riley","Reed","McCarron","Buckee","Gupta","Giralt","Duch","Gleiser","Bak","Christensen","Scanlon"],"color":["#80B1D3","#80B1D3","#80B1D3","#FFFFB3","#80B1D3","#BEBADA","#BEBADA","#FFFFB3","#FFFFB3","#8DD3C7","#FDB462","#BEBADA","#80B1D3","#BEBADA","#80B1D3","#80B1D3","#80B1D3","#8DD3C7","#80B1D3","#FDB462","#BEBADA","#80B1D3","#8DD3C7","#FDB462","#8DD3C7","#8DD3C7","#FDB462","#8DD3C7","#8DD3C7","#8DD3C7","#8DD3C7","#8DD3C7","#FB8072","#FB8072","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink","pink"],"label":["Defining the population attributable fraction for infectious diseases","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","The need for data science in epidemic modelling: Comment on: <d0>Mathematical models to characterize early epidemic growth: A review<d3> by Gerardo Chowell et al.","Testing the hypothesis of preferential attachment in social network formation","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","Social encounter networks: Characterizing great Britain","Social encounter networks: Collective properties and disease transmission","Tools to study trends in community structure: Application to fish and livestock trading networks","Networks and the epidemiology of infectious disease","Surveillance of influenza in Iceland during the 2009 pandemic","Student behavior during a school closure caused by pandemic influenza A/H1N1","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Individual identity and movement networks for disease metapopulations","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure","Optimal information transmission in organizations: Search and congestion","The role of routine versus random movements on the spread of disease in Great Britain","A Motif-Based Approach to Network Epidemics","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Mathematical modelling of infectious diseases","Impact of community structure on information transfer","Host community structure and the maintenance of pathogen diversity","The real communication network behind the formal chart: Community structure in organizations","The effect of size heterogeneity on community identification in complex networks","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain","Comparing community structure identification","Local search with congestion in complex communication networks","Community analysis in social networks","Community structure in Jazz","Self-similar community structure in a network of human interactions","Unified scaling law for earthquakes","Unified scaling law for earthquakes II","Brooks-Pollock","Danon","Rodrigues","Morales-Aza","Sikora","Thors","Ferreira","Gould","Hinds","Finn","House","Read","Keeling","Hancock","Rehman","Hall","Edeghere","Valadez","Berendes","Jeffery","Thomson","Ben Othman","Turki","Saffialden","Mirzoyan","Othman","Vernon","Green","Werkman","Munro","Kao","Kiss","Ford","Jewell","Roberts","Ross","Sigmundsdottir","Gudnason","Olafsson","Baldvinsdottir","Atladottir","Love","Briem","Miller","O'Hagan","Goldstein","Lajous","Lipsitch","Lopez-Ridaura","Astley","Dowell","Cowling","Fang","Hagy","Reshef","Robins","Biedrzycki","Arenas","Cabrales","Diaz-Guilera","Guimera","Vega-Redondo","Davies","Cohen","Wallinga","Riley","Reed","McCarron","Buckee","Gupta","Giralt","Duch","Gleiser","Bak","Christensen","Scanlon"],"x":[0.0491620831734647,0.673472045653285,-0.00310435289688471,-0.374468521465966,-0.520048375660432,-0.323273545778429,-0.277802064709297,-0.445460361276427,-0.405142733687273,-0.261185370507944,-0.686473838348321,0.0619090805329141,0.276127289141395,0.369471393786682,0.441896341044449,-0.378042007501385,-0.343166784967261,-0.565038807532781,-0.297895756347913,-0.509965164554697,0.473074178598891,-0.227050277949189,-0.352061832167295,0.0995653271681456,-0.3317708385985,-0.295227424463829,-0.193626577922917,-0.515733458991277,-0.354281491679742,-0.284234493611868,-0.113375374505842,-0.366324470242258,-0.00226898773084006,0.036890069276964,0.108405044111644,-0.126851466369597,0.96148335377151,0.817762529197408,0.959200807671839,0.996806094085284,1,0.918997919773995,0.905966048862751,0.871569934797852,-0.494692237190268,-0.578646626862383,-0.450541607927888,-0.6724129597192,-0.775586361857935,-0.502254867709463,-0.737722740688829,-0.3296739200859,-0.475468703590287,-0.346700524738672,-0.416253555131136,-0.490433644839935,-0.216240861678441,-0.274250673228611,-0.412062994765543,-0.262051127423821,-0.605231138469164,-0.313512862485795,-0.41633410011484,-0.329715345747206,-0.177454063364142,-0.244691547065698,-0.987302569879184,-0.967065515932935,-0.937932713972962,-1,0.244402124266467,0.133064154519396,-0.0182175921133992,0.233138585591292,0.168682903548538,0.0835030047355101,0.0269118311568406,0.411956177453901,0.460572017325668,0.500489285926555,0.399308909093126,0.457979144567357,0.627135862934115,0.662604150937282,0.546494331649152,0.500938934362097,0.731196624066746,0.666645980425101,0.578760529704111,0.708989434082233,0.608370620451099,-0.441773073531235,-0.857541555894673,-0.445087223651263,-0.453534165924954,-0.812412907343722,-0.813779440634223,0.782616454319337,0.677941949552791,0.603102270907465,0.737864953792632,0.730273631888922,0.278263143516879,0.162398088909863,-0.472094817173261,-0.814531014112994,-0.201083401825028,0.0292144546045319,0.0870659991193468,0.148732064259441],"y":[0.137987249826854,0.302547044501988,0.180703758534396,0.0831151689591234,0.329143691925963,-0.666971115439701,-0.676724825301541,0.0992013495094599,0.044233342712374,0.475367822099157,0.159108892502669,0.690939561965285,-0.0969545030909422,-0.168930913145408,0.0820921498310816,0.158303685653756,0.237590184476565,-0.291325641413256,0.137554061639008,0.0270966601142046,-0.281201982674975,0.118540849141606,-0.135518608233187,-0.338293571748425,-0.313039420243719,-0.174163213734296,0.394627232393272,-0.164306634249975,-0.213230594979026,-0.274798141061163,-0.258421713684997,-0.286100875706969,-0.434079058474222,-0.420163737920317,0.295196283468612,-0.036423786810617,0.453147109691557,0.536198416534313,0.255826846100043,0.386466566939814,0.311244444061876,0.366142422859431,0.519651811767849,0.454938153966903,0.17743881382009,0.0860190526772273,0.174426801968444,0.575508693966037,0.475647712292495,0.43750830370665,0.538364641319634,-0.905222876878389,-0.805984993906906,-0.859326236477603,-0.86638266251786,-0.949738189557909,-0.854397047082026,-0.864386667578928,-0.802784963690531,-1,0.220991504324239,0.595398162414659,0.731872802663145,0.76033617704185,0.600702142900571,0.620447552849125,0.132804997632631,0.256948229369209,0.318124232545204,0.201443144527748,0.937156694750418,1,0.934251896522409,0.862820819259456,0.934290864084161,0.936953563778149,0.99474362612085,-0.0890739474149479,-0.070900971424801,-0.102978278890912,-0.252678878998103,-0.129835165112683,-0.269608462093975,-0.191472022387449,-0.34691423281115,0.298871970410977,0.055689945755224,0.111467441686503,0.299447771407416,0.168350279494752,0.220474769248786,-0.27431718301175,-0.398000455838214,-0.23726488827852,-0.361728264582723,-0.468541278030784,0.00247385585620608,-0.355335738423073,-0.511324915136586,-0.521133280206407,-0.468369625660664,-0.405769111486078,-0.540421417947974,-0.544244046484863,-0.465239655378844,-0.238393877935285,-0.421762409910744,-0.626450944298234,-0.622807456180815,-0.608184559282417]},"edges":{"from":["Defining the population attributable fraction for infectious diseases","Defining the population attributable fraction for infectious diseases","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","Pneumococcal Serotypes Colonise the Nasopharynx in Children at Different Densities","The need for data science in epidemic modelling: Comment on: <d0>Mathematical models to characterize early epidemic growth: A review<d3> by Gerardo Chowell et al.","The need for data science in epidemic modelling: Comment on: <d0>Mathematical models to characterize early epidemic growth: A review<d3> by Gerardo Chowell et al.","Testing the hypothesis of preferential attachment in social network formation","Testing the hypothesis of preferential attachment in social network formation","Testing the hypothesis of preferential attachment in social network formation","Testing the hypothesis of preferential attachment in social network formation","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Strategies for Controlling Non-Transmissible Infection Outbreaks Using a Large Human Movement Data Set","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","Filling the Knowledge Gap: Measuring HIV Prevalence and Risk Factors among Men Who Have Sex with Men and Female Sex Workers in Tripoli, Libya","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","New evidence on the HIV epidemic in Libya: Why countries must implement prevention programs among people who inject drugs","Social encounter networks: Characterizing great Britain","Social encounter networks: Characterizing great Britain","Social encounter networks: Characterizing great Britain","Social encounter networks: Characterizing great Britain","Social encounter networks: Characterizing great Britain","Social encounter networks: Collective properties and disease transmission","Social encounter networks: Collective properties and disease transmission","Social encounter networks: Collective properties and disease transmission","Social encounter networks: Collective properties and disease transmission","Tools to study trends in community structure: Application to fish and livestock trading networks","Tools to study trends in community structure: Application to fish and livestock trading networks","Tools to study trends in community structure: Application to fish and livestock trading networks","Tools to study trends in community structure: Application to fish and livestock trading networks","Tools to study trends in community structure: Application to fish and livestock trading networks","Tools to study trends in community structure: Application to fish and livestock trading networks","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Networks and the epidemiology of infectious disease","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Surveillance of influenza in Iceland during the 2009 pandemic","Student behavior during a school closure caused by pandemic influenza A/H1N1","Student behavior during a school closure caused by pandemic influenza A/H1N1","Student behavior during a school closure caused by pandemic influenza A/H1N1","Student behavior during a school closure caused by pandemic influenza A/H1N1","Student behavior during a school closure caused by pandemic influenza A/H1N1","Student behavior during a school closure caused by pandemic influenza A/H1N1","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Mobile messaging as surveillance tool during pandemic (H1N1) 2009, Mexico","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Oseltamivir for treatment and prevention of pandemic influenza A/H1N1 virus infection in households, Milwaukee, 2009","Individual identity and movement networks for disease metapopulations","Individual identity and movement networks for disease metapopulations","Individual identity and movement networks for disease metapopulations","Individual identity and movement networks for disease metapopulations","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure","Contingency planning for a deliberate release of smallpox in Great Britain - the role of geographical scale and contact structure","Optimal information transmission in organizations: Search and congestion","Optimal information transmission in organizations: Search and congestion","Optimal information transmission in organizations: Search and congestion","Optimal information transmission in organizations: Search and congestion","Optimal information transmission in organizations: Search and congestion","Optimal information transmission in organizations: Search and congestion","The role of routine versus random movements on the spread of disease in Great Britain","The role of routine versus random movements on the spread of disease in Great Britain","The role of routine versus random movements on the spread of disease in Great Britain","A Motif-Based Approach to Network Epidemics","A Motif-Based Approach to Network Epidemics","A Motif-Based Approach to Network Epidemics","A Motif-Based Approach to Network Epidemics","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Use of cumulative incidence of novel influenza A/H1N1 in foreign travelers to estimate lower bounds on cumulative incidence in Mexico","Mathematical modelling of infectious diseases","Mathematical modelling of infectious diseases","Impact of community structure on information transfer","Impact of community structure on information transfer","Impact of community structure on information transfer","Host community structure and the maintenance of pathogen diversity","Host community structure and the maintenance of pathogen diversity","Host community structure and the maintenance of pathogen diversity","The real communication network behind the formal chart: Community structure in organizations","The real communication network behind the formal chart: Community structure in organizations","The real communication network behind the formal chart: Community structure in organizations","The real communication network behind the formal chart: Community structure in organizations","The real communication network behind the formal chart: Community structure in organizations","The effect of size heterogeneity on community identification in complex networks","The effect of size heterogeneity on community identification in complex networks","The effect of size heterogeneity on community identification in complex networks","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain","Demographic structure and pathogen dynamics on the network of livestock movements in Great Britain","Comparing community structure identification","Comparing community structure identification","Comparing community structure identification","Comparing community structure identification","Local search with congestion in complex communication networks","Local search with congestion in complex communication networks","Local search with congestion in complex communication networks","Local search with congestion in complex communication networks","Community analysis in social networks","Community analysis in social networks","Community analysis in social networks","Community analysis in social networks","Community analysis in social networks","Community structure in Jazz","Community structure in Jazz","Self-similar community structure in a network of human interactions","Self-similar community structure in a network of human interactions","Self-similar community structure in a network of human interactions","Self-similar community structure in a network of human interactions","Self-similar community structure in a network of human interactions","Unified scaling law for earthquakes","Unified scaling law for earthquakes","Unified scaling law for earthquakes","Unified scaling law for earthquakes","Unified scaling law for earthquakes II","Unified scaling law for earthquakes II","Unified scaling law for earthquakes II","Unified scaling law for earthquakes II"],"to":["Brooks-Pollock","Danon","Rodrigues","Danon","Morales-Aza","Sikora","Thors","Ferreira","Gould","Hinds","Finn","Danon","Brooks-Pollock","House","Read","Danon","Keeling","Hancock","Rehman","Hall","Edeghere","Danon","House","Keeling","Valadez","Berendes","Jeffery","Thomson","Ben Othman","Danon","Turki","Saffialden","Mirzoyan","Mirzoyan","Berendes","Jeffery","Thomson","Othman","Danon","Turki","Saffialden","Valadez","Danon","Read","House","Vernon","Keeling","Danon","House","Read","Keeling","Green","Werkman","Munro","Kao","Kiss","Danon","Keeling","Danon","Ford","House","Jewell","Roberts","Ross","Vernon","Sigmundsdottir","Gudnason","Olafsson","Baldvinsdottir","Atladottir","Love","Danon","Briem","Miller","Danon","O'Hagan","Goldstein","Lajous","Lipsitch","Lajous","Danon","Lopez-Ridaura","Astley","Miller","Dowell","O'Hagan","Goldstein","Lipsitch","Goldstein","Cowling","O'Hagan","Danon","Fang","Hagy","Miller","Reshef","Robins","Biedrzycki","Lipsitch","Keeling","Danon","Vernon","House","House","Hall","Danon","Keeling","Arenas","Cabrales","Danon","Diaz-Guilera","Guimera","Vega-Redondo","Danon","House","Keeling","House","Davies","Danon","Keeling","Lipsitch","Lajous","O'Hagan","Cohen","Miller","Goldstein","Danon","Wallinga","Riley","Dowell","Reed","McCarron","Keeling","Danon","Danon","Arenas","Diaz-Guilera","Buckee","Danon","Gupta","Guimera","Danon","Diaz-Guilera","Giralt","Arenas","Danon","Diaz-Guilera","Arenas","Kao","Danon","Green","Kiss","Danon","Diaz-Guilera","Duch","Arenas","Arenas","Danon","Diaz-Guilera","Guimera","Arenas","Danon","Diaz-Guilera","Gleiser","Guimera","Gleiser","Danon","Guimera","Danon","Diaz-Guilera","Giralt","Arenas","Bak","Christensen","Danon","Scanlon","Christensen","Danon","Scanlon","Bak"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","scaling":{"min":20,"max":100},"physics":true},"manipulation":{"enabled":false},"groups":{"useDefaultGroups":true,"Paper":{"shape":"square"}},"interaction":{"hover":false,"tooltipDelay":0},"edges":{"smooth":true},"physics":{"stabilization":false}},"groups":["Paper","Author"],"width":"100%","height":"600px","idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"full"}},"evals":[],"jsHooks":[]}</script>
+<img src='Picture1.png' title='fig:'/>
+
+<img src='Picture2.png' title='fig:'/>
 
 
+  <slide class="backdrop"></slide>
 
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
+</slides>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
@@ -253,6 +134,20 @@ $(document).ready(function () {
     script.type = "text/javascript";
     script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
   })();
 </script>
 
