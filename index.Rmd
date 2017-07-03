@@ -1,37 +1,13 @@
 ---
-title: "Leon Danon"
+#title: "Leon Danon"
 output:
-  html_document: default
-#  slidy_presentation: default
-#  ioslides_presentation: default
+  html_document: 
+    theme: simplex
+    toc: true  
+    toc_float: true 
+
 ---
-<style type="text/css">
-.title {
-  display: none;
-}
 
-#getting-started img {
-  margin-right: 10px;
-}
-
-</style>
-
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-
-### Senior Lecturer in Data Analytics {style="padding-top: 0px;"}
-
-I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, contacts and social networks. My research is often motivated by the study of large, relevant datasets In particular, I am interested in infectious disease epidemiology and the interplay between human behaviour and disease transmission at all spatial and temporal scales. 
-
-Below is a network of (most of)  my papers and scientific collaborators involved. Circles indicate authors, and boxes indicate papers. The size of the box is indicative of the number of citations, and the size of the circle is indicative of author name length. 
-
-</div>
-
-
-
-
-<!--[](images/RMarkdownOutputFormats.png)-->
-<!-- comment -->
 
 
 ```{r,echo=FALSE}
@@ -52,61 +28,6 @@ library(visNetwork)
 library(RColorBrewer)
 
 ```
-
-```{r}
-#let's try downloading and reading scopus export csv
-
-
-papers<-read.csv("scopus_edits.csv")
-
-lcol=length(unique(papers$Theme))
-
-palette<-brewer.pal(lcol,"Set3")
-
-
-
-
-as.character(papers$Author)%>%strsplit(', ')->aulinks
-
-meltedlinks<-melt(aulinks) # create a melted versio of coauthor links
-meltedlinks%>%filter(!grepl('\\.',value))->meltedlinks # remove initials. 
-meltedlinks$value<-stri_trans_general(meltedlinks$value,"Latin-ASCII") # get rid of annoying accents
-
-aull <- data.frame(from = papers$Title[as.numeric(meltedlinks$L1)], to = meltedlinks$value) # make link list for authors and papers. 
-
-#papers%>%select(id=Title,DOI,value = Cited.by,Source.title,Year)-> papernodes
-papers$group="Paper"
-papers$shape = "square"
-papers$tooltip <- paste0(papers$Title,"<br>",
-    papers$Source.title,"<br>",
-  "(",papers$Year,")<br>",
-  "<a href=http://dx.doi.org/",papers$DOI,"> DOI:",papers$DOI,"</a><br>",
-  papers$Theme
-)
-papers$color= palette[papers$Theme]
-papers%>%select(id=Title,group,value = Cited.by,title=tooltip,color)->papernodes
-
-
-
-aull%>%select(id=to)%>%distinct(id)->aunodes
-aunodes$group="Author"
-aunodes$title <- paste0(aunodes$id)
-aunodes$value = 1
-aunodes$color = 'pink'
-nodes<-data.frame(rbind(papernodes,aunodes))
-
-visNetwork(nodes, aull, width = "100%",height = "800px") %>%
-  visNodes(scaling = list(min = 20, max = 100)) %>%
-  #visGroups(groupname = "Author", shape = "circle") %>%
-  #visGroups(groupname = "Paper", shape = "square",color = list(background = 'grey', border = 'black')) %>%
-  visGroups(groupname = "Paper", shape = "square") %>%
-  visOptions(highlightNearest = TRUE)%>% 
-  visInteraction(hover = FALSE,tooltipDelay = 0)%>%
-  visIgraphLayout(randomSeed=20,type="full",smooth=TRUE,physics = TRUE)
-  #visLegend(width = 0.1)#%>%
-  #visPhysics(solver = "barnesHut",stabilization = TRUE,barnesHut = list(avoidOverlap = 0.05))
-
-
-
-```
+# Who
+I am an interdisciplinary scientist interested in collective behaviour and complex systems. I like studying human populations, contacts and social networks, often guided by the study of large, relevant datasets. Infectious disease epidemiology and the subtle interplay between human behaviour and disease transmission remains an open problem that I spend a lot of time thinking about.
 
